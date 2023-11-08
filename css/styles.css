@@ -1,0 +1,183 @@
+/* Root */ 
+
+html {
+  font-family: inter;
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --brown: #43362E;
+  --bronze: #D57E39;
+  --white: #FFF;
+}
+
+/* Header */
+
+
+  /* Keyframes for backdrop */
+
+  @keyframes fadeIn {
+    from {
+      opacity:0;
+    }
+    to {
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity:0.8;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+.backdrop-active {
+  z-index: 400;
+  background-color: rgba(67, 54, 46, 0.8);
+  height: 100%;
+  width: 100vw;
+  position: fixed;
+  animation: fadeIn 0.3s ease-in; 
+}
+
+#navigation-line {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header {
+  position: relative;
+  z-index: 500;
+}
+
+nav {
+  margin-left: auto;
+  z-index: 700;
+}
+
+nav a {
+  text-decoration: none;
+  list-style: none;
+  padding: 0 1rem;
+  color: var(--brown);
+  font-size: 1.375rem;
+}
+
+nav li {
+  list-style: none;
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--bronze);
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+   justify-content: flex-start;
+   flex-direction: column;
+   align-items: flex-start;
+   position: fixed; 
+   right: -150%;
+   transition: right 0.3s ease-in-out;
+   top: 0;
+   background: #FFF;
+   height: 100vh;
+   margin: 0;
+   padding: 4rem 3rem 2rem;
+}
+
+.menu-active nav ul {
+  right: 0;
+  transition: right 0.3s ease-in-out;
+}
+
+#menu-list i {
+  position: absolute;
+  right: 15%;
+  top: 4%;
+  font-size: 2rem;
+  color: var(--brown);
+}
+
+.hamburger-button {
+  font-size: 1.5rem;
+  color: var(--brown);
+}
+
+.logo-text-desktop {
+  display: flex;
+  align-items: center;
+}
+
+
+
+/*Media queries*/
+
+@media screen and (max-width: 767.9px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  #logo-with-title {
+    margin-left: -2rem;
+  }
+  #navigation-line {
+    padding-top: 1rem;
+  }
+  .hamburger-button {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .hamburger-button::before {
+    display: none;
+  }
+
+  nav ul {
+    flex-direction: row;
+    background: none;
+    height: auto;
+    position: static;
+    padding: 0;
+  }
+
+  nav li {
+    border-bottom: none;
+  }
+
+  #menu-list i {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1330px;
+  }
+}
