@@ -8,12 +8,26 @@ html {
 body {
   margin: 0;
   padding: 0;
+  position: relative;
+  height: 100%;
+}
+
+h1 {
+  font-family: lemon;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  height: auto;
 }
 
 :root {
   --brown: #43362E;
   --bronze: #D57E39;
   --white: #FFF;
+  --frontpageWhite: #D9D9D9;
 }
 
 /* For white header - Creating black background to header element for adjusting the styling on the white version of the header */
@@ -137,6 +151,60 @@ nav ul {
   align-items: center;
 }
 
+/* Frontpage */
+
+.body-frontpage {
+  background: var(--frontpageWhite);
+}
+
+.hero-image-container {
+  height: auto;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
+.hero-photo img {
+  height: auto;
+  width: 100%;
+}
+
+.frontpage-content {
+  position: absolute;
+  top: 120px;
+  left: 50%; 
+  transform: translateX(-50%);
+  text-align: center;
+  width: 90%;
+}
+
+.frontpage-logo {
+  padding-top: 2rem;
+}
+
+.frontpage-h1 {
+  font-size: 0.8rem;
+  color: var(--brown);
+  font-weight: regular;
+}
+
+/* Frontpage gradient */ 
+
+.gradient-container {
+  position: relative;
+
+  &:after {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(217,217,217,1));
+  }
+}
+
 /* Footer */ 
 
 footer {
@@ -147,6 +215,7 @@ footer {
   flex-direction: column;
   padding-top: 1rem;
   position: relative;
+  top: 100vh;
 }
 
 footer a {
@@ -187,12 +256,20 @@ footer a {
   color: #FFF;
 }
 
-
 /*Media queries*/
+
+@media screen and (min-width: 500px) {
+  .frontpage-logo {
+    padding-top: 8rem;
+  }
+}
 
 @media screen and (max-width: 767.9px) {
   .container {
     max-width: 540px;
+  }
+  .fa-angle-down {
+    display: none;
   }
 }
 
@@ -219,15 +296,30 @@ footer a {
     font-size: 0.8rem;
     margin-top: -1.8rem;
   }
+  .frontpage-content {
+    top: 125px;
+
+  }
+  .frontpage-h1 {
+    font-size: 1rem;
+  }
+  .frontpage-logo {
+    padding-top: 300px;
+  }
 }
 
 @media screen and (min-width: 992px) {
   .container {
     max-width: 960px;
   }
-
   .hamburger-button::before {
     display: none;
+  }
+  .frontpage-content {
+    top: 175px;
+  }
+  .frontpage-h1 {
+    font-size: 1.2rem;
   }
 
   nav ul {
@@ -237,11 +329,9 @@ footer a {
     position: static;
     padding: 0;
   }
-
   nav li {
     border-bottom: none;
   }
-
   .fa-xmark::before {
     display: none;
   }
@@ -251,10 +341,19 @@ footer a {
   .container {
     max-width: 1140px;
   }
+  .frontpage-content {
+    top: 175px;
+  }
+  .frontpage-h1 {
+    font-size: 1.6rem;
+  }
 }
 
 @media screen and (min-width: 1400px) {
   .container {
     max-width: 1330px;
+  }
+  .frontpage-logo {
+    padding-top: 400px;
   }
 }
