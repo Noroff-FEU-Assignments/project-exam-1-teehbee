@@ -17,4 +17,4 @@ footer.innerHTML=`  <footer>
   </ul>
 </footer>`
 
-document.body.append(footer);
+document.body.append(footer)
