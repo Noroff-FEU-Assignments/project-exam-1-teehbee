@@ -1,6 +1,8 @@
-const footer = document.createElement("footer");
 
-footer.innerHTML=`  <footer>
+const footer = document.createElement("footer");
+const body = document.body;
+
+footer.innerHTML=`
 <picture>
   <source media="(min-width: 768px)" srcset="../assets/svg/valdres-logo-large.svg">
   <img src="../assets/svg/valdres-logo-small.svg" alt="Visit Valdres logo on the bottom of the page">
@@ -14,7 +16,6 @@ footer.innerHTML=`  <footer>
     <a href="blog.html"><li>Blogs</li></a>
     <a href="about.html"><li>About</li></a>
     <a href="contact.html"><li>Contact</li></a>
-  </ul>
-</footer>`
+  </ul>`
 
 document.body.append(footer)
