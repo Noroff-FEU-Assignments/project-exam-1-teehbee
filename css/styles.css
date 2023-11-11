@@ -473,6 +473,25 @@ footer a {
     margin: 1rem auto 0;
   }
 
+  /* Contact */ 
+
+  .contact-h1 {
+    font-size: 1rem;
+  }
+
+  .contact-h2 {
+    font-size: 1rem;
+  }
+
+  #contact-form {
+    margin-top: 1.5rem;
+  }
+
+  #contact-form label {
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+
     /* Navigation */
   
     #logo-with-title {
@@ -569,6 +588,12 @@ footer a {
     border: 1px solid red;
     margin: 0 auto;
   }
+
+  /* Contact */ 
+  .contact-h1 {
+    font-size: 1.2rem;
+  }
+
 }
 
 @media screen and (min-width: 1400px) {
