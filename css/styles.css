@@ -144,14 +144,14 @@ nav ul {
    top: 0;
    background: #FFF;
    height: 100vh;
-   width: 150px;
    margin: 0;
    padding: 4rem 3rem 2rem;
 }
 
 .menu-active nav ul {
   right: 0;
-  transition: right 0.3s ease-in-out;}
+  transition: right 0.3s ease-in-out;
+}
 
 #menu-list i {
   position: absolute;
@@ -425,6 +425,9 @@ footer a {
       height: auto;
       position: static;
       padding: 0;
+    }
+    nav a {
+      font-size: 1.4rem;
     }
     nav li {
       border-bottom: none;
