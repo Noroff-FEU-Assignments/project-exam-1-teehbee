@@ -31,6 +31,10 @@ h1 {
   color: var(--brown);
 }
 
+.light {
+  color: var(--white);
+}
+
 .container {
   margin: 0 auto;
   position: relative;
@@ -127,10 +131,6 @@ nav li {
   padding: 0.5rem;
   border-bottom: 2px solid var(--bronze);
   width: 100%;
-}
-
-.navbar-white a {
-  color: #FFF;
 }
 
 nav ul {
@@ -279,6 +279,96 @@ nav ul {
   max-width: 250px;
 }
 
+/* Blogs page */
+
+.blogs-h1 {
+  font-size: 0.75rem;
+  font-weight: lighter;
+  padding-top: 1rem;
+}
+
+.blog-container {
+  height: 440px;
+  max-width: 300px;
+  border: 1px solid red;
+  margin: 1rem auto 0;
+}
+
+.blogs-load-more {
+  font-family: lemon;
+  font-size: 0.8rem;
+  display: inline-block;
+  padding: 2rem;
+  text-decoration: none;
+}
+
+  /* Selector */
+
+  .custom-select {
+    width: 200px;
+    margin: 0 auto;
+    padding: 4rem 0;
+  }
+
+  .custom-select select {
+    padding: 0.4rem 0.6rem;
+    border-radius: 5px;
+    background: var(--bronze);
+    color: #FFF;
+    font-size: 1rem;
+    opacity: 0.8;
+  }
+
+
+/* Contact */
+
+.contact-h1 {
+  font-size: 0.75rem;
+  width: 90%;
+  padding-top: 5vh;
+  margin: 0 auto;
+}
+
+.contact-h2 {
+  font-size: 0.75rem;
+}
+
+.contact-container {
+  width: 90%;
+  max-width: 655px;
+  border: 2px solid rgb(213, 126, 57, 0.6);
+  background: rgba(255,255,255,0.2);
+  border-radius: 5px;
+  margin: 2rem auto 0;
+  padding: 1rem;
+}
+
+#contact-form {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#contact-form label {
+  display: block;
+  margin: 0.6em 0;
+  font-size: 0.6rem;
+  color: var(--brown);
+}
+
+#contact-form textarea {
+  font-family: inter;
+}
+
+#contact-form textarea,
+#contact-form input {
+  width: 200px;
+}
+
+#contact-form .btn-bronze {
+  display: block;
+  margin: 1rem auto;
+}
+
 /* Footer */ 
 
 footer {
@@ -374,6 +464,15 @@ footer a {
     font-size: 1.4rem;
   }
 
+  /* Blogs */ 
+
+  .blog-container {
+    height: 414px;
+    max-width: 655px;
+    border: 1px solid red;
+    margin: 1rem auto 0;
+  }
+
     /* Navigation */
   
     #logo-with-title {
@@ -414,6 +513,22 @@ footer a {
       font-size: 1rem;
     }
 
+
+    /* Blogs */
+
+    .blogs-h1 {
+      font-size: 1.375rem;
+      font-weight: lighter;
+      padding-top: 1rem;
+    }
+
+    .blogs-load-more {
+      font-size: 1.2rem;
+      display: inline-block;
+      padding: 4rem;
+    }
+    
+
     /* Navigation */
 
     .hamburger-button::before {
@@ -435,11 +550,24 @@ footer a {
     .fa-xmark::before {
       display: none;
     }
+    .navbar-white a {
+      color: var(--white);
+    }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+  .blogs {
+    display: flex;
+    margin: 0;
+  }
+  .blog-container {
+    height: 655px;
+    width: 45%;
+    border: 1px solid red;
+    margin: 0 auto;
   }
 }
 
