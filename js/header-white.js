@@ -18,7 +18,7 @@ const header = document.createElement("header");
       <ul id="menu-list" class="menu-list menu-list-white">
         <li><i class="fa-solid fa-xmark"></i></li>
         <li><a href="index.html">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>     

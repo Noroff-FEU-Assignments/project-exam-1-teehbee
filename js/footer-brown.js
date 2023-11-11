@@ -13,7 +13,7 @@ footer.innerHTML=`
   <a href="#" class="footer-copyright-text">&copy; 2023 Tor-Håkon Bergseng</a>
   <ul class="footer-navigation">
     <a href="index.html"><li>Home</li></a>
-    <a href="blog.html"><li>Blogs</li></a>
+    <a href="blogs.html"><li>Blogs</li></a>
     <a href="about.html"><li>About</li></a>
     <a href="contact.html"><li>Contact</li></a>
   </ul>`
