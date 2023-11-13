@@ -334,8 +334,8 @@ nav ul {
 }
 
 .contact-container {
-  width: 90%;
-  max-width: 655px;
+  width: 25%;
+  min-width: 200px;
   border: 2px solid rgb(213, 126, 57, 0.6);
   background: rgba(255,255,255,0.2);
   border-radius: 5px;
@@ -344,7 +344,7 @@ nav ul {
 }
 
 #contact-form {
-  text-align: center;
+  text-align: left;
   margin: 0 auto;
 }
 
@@ -352,6 +352,7 @@ nav ul {
   display: block;
   margin: 0.6em 0;
   font-size: 0.6rem;
+  font-weight: bold;
   color: var(--brown);
 }
 
@@ -361,12 +362,21 @@ nav ul {
 
 #contact-form textarea,
 #contact-form input {
-  width: 200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 #contact-form .btn-bronze {
   display: block;
   margin: 1rem auto;
+}
+
+.contact-error p {
+  color: red;
+  font-size: 0.75rem;
+  /* text-align: center; */
+  margin-top: 0.2rem;
+  padding-left: 0.1rem;
 }
 
 /* Footer */ 
@@ -491,7 +501,6 @@ footer a {
     font-size: 0.75rem;
     font-weight: bold;
   }
-
     /* Navigation */
   
     #logo-with-title {

@@ -8,14 +8,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lemon">
   <script src="https://kit.fontawesome.com/99f531cd0d.js" crossorigin="anonymous"></script>
-  <script defer src="js/header-brown.js"></script>
-  <script defer src="js/footer-brown.js"></script>
-  <script defer src="js/index.js"></script>
-  <script defer src="js/form.js"></script>
-  
+  <script defer src="js/header-brown.js" type="module"></script>
+  <script defer src="js/footer-brown.js" type="module"></script>
+  <script defer src="js/index.js" type="module"></script>
+  <script defer src="js/form.js" type="module"></script>
   <title>VisitValdres | Contact Us</title>
 </head>
-<body class="">
+<body>
   <main>
     <div class="hero-image-container">
       <div class="gradient-container">
@@ -33,12 +32,24 @@
           <form id="contact-form">
             <label for="name">Full name*</label>
             <input name="fullname" id="name" placeholder="Name"/>
+            <div class="contact-error">
+              <p>Name not inserted correctly</p>
+            </div>
             <label for="email">E-mail address*</label>
             <input type="email" name="email" id="email" placeholder="Email address"/>
+            <div class="contact-error">
+              <p>Please insert a valid e-mail address</p>
+            </div>
             <label for="subject">"Subject"</label>
             <input name="subject" id="subject" placeholder="Subject"/>
+            <div class="contact-error">
+              <p>Insert subject text</p>
+            </div>
             <label for="message">Your message</label>
             <textarea id="message" name="message" placeholder="Type your message here"></textarea>
+            <div class="contact-error">
+              <p>Insert message</p>
+            </div>
             <input type="submit" value="SEND" class="btn-bronze">
           </form>
         </div>
