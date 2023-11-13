@@ -46,13 +46,31 @@ h1 {
 .btn-bronze {
   background: var(--bronze);
   padding: 0.5rem 1rem;
+  margin: 1rem 0;
   border-radius: 5px;
   text-decoration: none;
   font-family: lemon;
   color: var(--brown);
   display: inline-block;
-  margin: 1rem 0;
   position: relative;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 14px -7px var(--bronze);
+  background-image: linear-gradient(45deg, var(--bronze)  0%, #F09819  51%, var(--bronze)   100%);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.btn-bronze:hover {
+  background-position: right center;
+  color: #fff;
+}
+
+.btn-bronze:active {
+  transform: scale(0.95);
+}
+
+.btn-bronze:disabled {
+  background-image: linear-gradient(45deg, var(--brown)  0%, #F09819  51%, var(--brown) 100%);
 }
 
 
