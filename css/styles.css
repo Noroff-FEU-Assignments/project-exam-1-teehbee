@@ -69,12 +69,7 @@ h1 {
   transform: scale(0.95);
 }
 
-.btn-bronze:disabled {
-  background-image: linear-gradient(45deg, var(--brown)  0%, #F09819  51%, var(--brown) 100%);
-}
-
-
-
+  /* Disabled button class */ 
 
 /* For white header - Creating black background to header element for adjusting the styling on the white version of the header */
 
@@ -357,7 +352,7 @@ nav ul {
   border: 2px solid rgb(213, 126, 57, 0.6);
   background: rgba(255,255,255,0.2);
   border-radius: 5px;
-  margin: 2rem auto 0;
+  margin: 5rem auto 0;
   padding: 1rem;
 }
 
@@ -376,6 +371,7 @@ nav ul {
 
 #contact-form textarea {
   font-family: inter;
+  resize: none;
 }
 
 #contact-form textarea,
@@ -511,6 +507,8 @@ footer a {
 
   .contact-container {
     width: 40%;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
   }
   .contact-h1 {
     font-size: 1rem;
@@ -598,7 +596,6 @@ footer a {
       padding: 0 1rem;
     }
 
-
     /* Navigation */
 
     .hamburger-button::before {
@@ -648,5 +645,8 @@ footer a {
 @media screen and (min-width: 1400px) {
   .container {
     max-width: 1330px;
+  }
+  .contact-container {
+    margin-bottom: 10rem;
   }
 }

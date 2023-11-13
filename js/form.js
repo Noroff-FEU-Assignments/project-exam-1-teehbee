@@ -10,6 +10,8 @@ const form = document.querySelector("#contact-form");
   const subjectError = document.querySelector("#subject-error");
   const message = document.querySelector("#message");
   const messageError = document.querySelector("#message-error");
+  const button = document.querySelector("#submit-button");
+  const submitMessage = document.querySelector(".submit-message");
 
   function validateForm() {
     event.preventDefault();
