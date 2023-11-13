@@ -30,25 +30,25 @@
         <div class="contact-container">
           <h2 class="contact-h2 brown">Contact us</h2>
           <form id="contact-form">
-            <label for="name">Full name*</label>
+            <label for="name">Full name (required)</label>
             <input name="fullname" id="name" placeholder="Name"/>
-            <div class="contact-error">
-              <p>Name not inserted correctly</p>
+            <div class="contact-error" id="name-error">
+              <p>Name must be more than five characters long</p>
             </div>
-            <label for="email">E-mail address*</label>
-            <input type="email" name="email" id="email" placeholder="Email address"/>
-            <div class="contact-error">
-              <p>Please insert a valid e-mail address</p>
+            <label for="email">E-mail address (required)</label>
+            <input name="email" id="email" placeholder="Email address"/>
+            <div class="contact-error" id="e-mail-error">
+              <p>Invalid email address</p>
             </div>
-            <label for="subject">"Subject"</label>
-            <input name="subject" id="subject" placeholder="Subject"/>
-            <div class="contact-error">
-              <p>Insert subject text</p>
+            <label for="subject">Topic (required)</label>
+            <input name="subject" id="subject" placeholder="Topic"/>
+            <div class="contact-error" id="subject-error">
+              <p>Subject must be contain more than 15 characters</p>
             </div>
-            <label for="message">Your message</label>
+            <label for="message">Your message (required)</label>
             <textarea id="message" name="message" placeholder="Type your message here"></textarea>
-            <div class="contact-error">
-              <p>Insert message</p>
+            <div class="contact-error" id="message-error">
+              <p>Message must contain more than 25 characters</p>
             </div>
             <input type="submit" value="SEND" class="btn-bronze">
           </form>
