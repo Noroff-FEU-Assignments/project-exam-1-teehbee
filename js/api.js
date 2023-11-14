@@ -11,4 +11,4 @@ async function getBlogPosts() {
   return posts;
 }
 
-export { getBlogPosts };
+export { getBlogPosts, url };
