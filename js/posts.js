@@ -11,7 +11,7 @@ const posts = await getBlogPosts();
 const fetchLoader = document.querySelector(".loader");
 fetchLoader.classList.remove("loader");
       
-for (let i = 0; i < 6; i++) {
+for (let i = 0; i < 10; i++) {
   const post = posts[i];
   console.log(post.title.rendered);
 
@@ -19,32 +19,33 @@ for (let i = 0; i < 6; i++) {
   /* Create image element */
 
    const blogListImage = document.createElement("img");
-   blogListImage.src= post.jetpack_featured_media_url;
+   blogListImage.src = post.jetpack_featured_media_url;
    blogListImage.classList.add("blogs-list-image");
  
   /* Create title element */
 
   const blogListTitle = document.createElement("h2");
-  blogListTitle.textContent= post.title.rendered;
+  blogListTitle.innerHTML= post.title.rendered;
   blogListTitle.classList.add("blogs-list-title");
 
   /* Create anchor tag */
 
   const blogListReadMoreLink = document.createElement("a");
   blogListReadMoreLink.textContent = "Read more...";
-  blogListReadMoreLink.href = "../blogpost.html?id=${post.id}";
+  blogListReadMoreLink.href = `../blogpost.html?id=${post.id}`;
   blogListReadMoreLink.classList.add("bloglist-anchortag");
 
   /* Create excerpt for larger screens */
 
   const blogListPreview = document.createElement("p");
-  blogListPreview.textContent = post.excerpt.rendered;
+  blogListPreview.innerHTML = post.excerpt.rendered;
   blogListPreview.classList.add("text-preview");
 
   /* Create main blog container */
  
    const blogsContainer = document.createElement("div");
    blogsContainer.classList.add("blog-container");
+
  
   
    /* Append image */ 
@@ -74,3 +75,4 @@ for (let i = 0; i < 6; i++) {
 }
 
 frontPagePosts();
+
