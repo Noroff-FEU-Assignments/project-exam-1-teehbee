@@ -396,7 +396,7 @@ nav ul {
 .blog-post-title h2 {
   font-family: lemon;
   font-size: 1rem;
-  color: var(--white);
+  color: var(--brown);
 }
 
 .blog-post-title {
@@ -424,6 +424,10 @@ nav ul {
 .blog-post-content-container p {
   line-height: 1.5;
   font-size: 0.75rem;
+}
+
+.blog-post-specific p {
+  padding: 0;
 }
 
 .author-post-container {
@@ -850,6 +854,10 @@ footer a {
 
   }
 
+  .blog-post-image {
+    padding-top: 5%;
+  }
+
   .blog-post-image,
   .blog-post-content-container {
     width: 50%;
@@ -861,6 +869,11 @@ footer a {
 
   .blog-post-content-container p {
     font-size: 0.75rem;
+    padding: 0.5rem 0;
+  }
+
+  .author-post-container {
+    padding-top: 15%;
   }
 
 
@@ -898,8 +911,8 @@ footer a {
   }
   .blog-post-content-container p {
     font-size: 0.75rem;
-    font-weight: bold;
-    padding: 1rem;
+    /* font-weight: bold; */
+    padding-top: 1rem;
   }
 
   .blog-post-content-container {
@@ -907,8 +920,8 @@ footer a {
   }
 
   .blog-post-image {
-    width: 30%;
-    padding-top: 2rem;
+    width: 40%;
+    padding-top: 7%;   
   }
 
   .blog-post-image img {
