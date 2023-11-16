@@ -13,7 +13,7 @@ fetchLoader.classList.remove("loader");
       
 for (let i = 0; i < 10; i++) {
   const post = posts[i];
-  console.log(post.title.rendered);
+  console.log(post);
 
 
   /* Create image element */

@@ -477,23 +477,23 @@ nav ul {
 }
 
 .contact-container {
-  width: 25%;
-  min-width: 200px;
+  max-width: 350px;
   background: rgb(248, 251, 251, 0.4);
   box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
   border-radius: 5px;
   margin: 5rem auto 0;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 #contact-form {
   text-align: left;
   margin: 0 auto;
+  width: 100%;
 }
 
 #contact-form label {
   display: block;
-  margin: 0.6em 0;
+  margin: 0.7rem 0 0.2rem;
   font-size: 0.6rem;
   font-weight: bold;
   color: var(--brown);
@@ -511,12 +511,14 @@ nav ul {
   outline: 2px solid rgb(213, 126, 57, 0.4);
   border: none;
   border-radius: 5px;
-  padding: 0.3rem;
+  padding: 0.5rem;
+  box-sizing:border-box;
 }
 
 #contact-form input:focus,
 #contact-form textarea:focus {
   outline: 2px solid rgb(213, 126, 57, 1);
+  
 }
 
 #contact-form .btn-bronze {
@@ -779,14 +781,6 @@ footer a {
 
     .contact-container {
       width: 400px;
-    }
-
-    #contact-form input {
-      padding: 0.4rem 0.2rem;
-    }
-
-    #contact-form {
-      padding: 0 1rem;
     }
 
     /* Blogposts */
