@@ -1,6 +1,7 @@
 //Api call for blog posts
 
 const url = "https://visitvaldrescms.thbergseng.com/wp-json/wp/v2/posts?per_page=30";
+const urlSpecific = "https://visitvaldrescms.thbergseng.com/wp-json/wp/v2/posts/"
 
 async function getBlogPosts() {
 
@@ -23,7 +24,7 @@ const id = params.get("id");
 
 async function getBlogPost() {
 
-  const response = await fetch(url + id);
+  const response = await fetch(urlSpecific + id);
 
   const blogDetails = await response.json();
 
