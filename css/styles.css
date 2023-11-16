@@ -508,8 +508,15 @@ nav ul {
 #contact-form input {
   width: 100%;
   margin: 0 auto;
-  border: 2px solid rgb(213, 126, 57, 0.6);
+  outline: 2px solid rgb(213, 126, 57, 0.4);
+  border: none;
   border-radius: 5px;
+  padding: 0.3rem;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: 2px solid rgb(213, 126, 57, 1);
 }
 
 #contact-form .btn-bronze {

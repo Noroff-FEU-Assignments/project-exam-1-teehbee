@@ -62,6 +62,27 @@ const form = document.querySelector("#contact-form");
       const regEx = /\S+@\S+\.\S+/;
       const patternMatches = regEx.test(email);
       return patternMatches;
-    }}
+    }
+
+    /* Clearing the fields and removing error text after submitting */
+
+    if(
+      checkLength(name.value, 4) &&
+      checkLength(subject.value, 14) &&
+      checkLength(message.value, 24) &&
+      validateEmail(email.value)
+    ) {
+      name.value = "";
+      subject.value = "";
+      message.value = "";
+      email.value = "";
+
+      nameError.style.display = "none";
+      subjectError.style.display = "none";
+      messageError.style.display = "none";
+      emailError.style.display = "none";
+
+    } 
+  }
 
     form.addEventListener("submit", validateForm);
