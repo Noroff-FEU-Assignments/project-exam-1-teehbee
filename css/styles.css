@@ -256,7 +256,8 @@ nav ul {
 .frontpage-text-box {
   padding: 1rem;
   border-radius: 5px;
-  border: 2px solid rgb(213, 126, 57, 0.6);
+  background: rgb(248, 251, 251, 0.4);
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
   margin: 1rem;
 }
 
@@ -271,7 +272,8 @@ nav ul {
 
 .carousel {
   height: 300px;
-  border: 2px solid rgb(213, 126, 57, 0.6);
+  background: rgb(248, 251, 251, 0.4);
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
   padding: 1rem;
   border-radius: 5px;
   margin: 1rem;
@@ -283,9 +285,10 @@ nav ul {
   text-align: left;
   padding: 0 30px;
   margin-top: 3rem;
-  border: 2px solid rgb(213, 126, 57, 0.6);
+  background: rgb(248, 251, 251, 0.4);
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
   border-radius: 5px;
-  background: rgba(255,255,255,0.6)
+  
 }
 
 .h1-about,
@@ -349,11 +352,12 @@ nav ul {
 
   .blog-container {
     padding: 0;
-    border: 2px solid rgb(213, 126, 57, 0.6);
     border-radius: 5px;
     padding: 0.5rem;
     margin: 1rem auto 0;
-    background: rgb(255, 255, 255, 0.4);
+    background: rgb(248, 251, 251, 0.4);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    
     max-width: 300px;
   }
 
@@ -475,8 +479,8 @@ nav ul {
 .contact-container {
   width: 25%;
   min-width: 200px;
-  border: 2px solid rgb(213, 126, 57, 0.6);
-  background: rgba(255,255,255,0.2);
+  background: rgb(248, 251, 251, 0.4);
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
   border-radius: 5px;
   margin: 5rem auto 0;
   padding: 1rem;
@@ -528,7 +532,7 @@ nav ul {
 
 footer {
   
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -835,6 +839,8 @@ footer a {
     max-width: 1140px;
   }
 
+  /* Blogs */
+
   .blogs {
     display: flex;
     flex-wrap: wrap;
@@ -869,11 +875,11 @@ footer a {
 
   .blog-post-content-container p {
     font-size: 0.75rem;
-    padding: 0.5rem 0;
+    padding: 0;
   }
 
   .author-post-container {
-    padding-top: 15%;
+    padding-top: 2rem;
   }
 
 

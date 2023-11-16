@@ -1,5 +1,6 @@
 import { getBlogPost, url } from "./api.js";
 
+const blogPostUpperContainer = document.querySelector(".blog-upper-container");
 const blogSpecificMainContainer = document.querySelector(".blog-post-specific");
 
 
@@ -59,7 +60,7 @@ async function blogPostSpecific() {
 
     /* Append title container to main container */
 
-    blogSpecificMainContainer.appendChild(blogPostSpecificTitleContainer);
+    blogPostUpperContainer.appendChild(blogPostSpecificTitleContainer);
 
     /* Append main blog container to main container */
 

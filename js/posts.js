@@ -28,12 +28,16 @@ for (let i = 0; i < 10; i++) {
   blogListTitle.innerHTML= post.title.rendered;
   blogListTitle.classList.add("blogs-list-title");
 
-  /* Create anchor tag */
+  /* Create anchor tag for the read more button */
 
   const blogListReadMoreLink = document.createElement("a");
   blogListReadMoreLink.textContent = "Read more...";
   blogListReadMoreLink.href = `../blogpost.html?id=${post.id}`;
   blogListReadMoreLink.classList.add("bloglist-anchortag");
+
+  const pictureAnchorTag = document.createElement("a");
+  pictureAnchorTag.href= `../blogpost.html?id=${post.id}`;
+  pictureAnchorTag.classList.add("picture-anchor-tag");
 
   /* Create excerpt for larger screens */
 
@@ -49,7 +53,11 @@ for (let i = 0; i < 10; i++) {
  
   
    /* Append image */ 
-   blogsContainer.appendChild(blogListImage);
+   pictureAnchorTag.appendChild(blogListImage);
+
+   /* Append image anchor tag to main container */
+
+   blogsContainer.appendChild(pictureAnchorTag);
 
    /* Append title */
 
