@@ -1,6 +1,6 @@
 /* Importing blog posts to the blog list page */ 
 
-import { getBlogPosts, url } from "./api.js"; 
+import { getBlogPosts } from "./api.js"; 
 
 const blogsMainContainer = document.querySelector(".blogs");
 
@@ -11,7 +11,7 @@ const posts = await getBlogPosts();
 const fetchLoader = document.querySelector(".loader");
 fetchLoader.classList.remove("loader");
       
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 18; i++) {
   const post = posts[i];
   console.log(post);
 

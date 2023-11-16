@@ -40,5 +40,3 @@ const activeMenu = document.querySelector(".backdrop-active");
   // }
 
   // document.addEventListener("click", handleOutsideClick);
-
-  /* Import header and export to site */

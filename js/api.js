@@ -1,6 +1,6 @@
 //Api call for blog posts
 
-const url = "https://visitvaldrescms.thbergseng.com/wp-json/wp/v2/posts/";
+const url = "https://visitvaldrescms.thbergseng.com/wp-json/wp/v2/posts?per_page=30";
 
 async function getBlogPosts() {
 
