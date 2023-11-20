@@ -91,10 +91,44 @@ async function blogPostSpecific() {
     blogSpecificTextContainer.appendChild(blogSpecificText);
 
 
+    /* Display image modal on image click */
+
+    blogSpecificImage.addEventListener("click", () => {
+      const imageUrl = specificPost.jetpack_featured_media_url;
+      const modalImage = document.getElementById("modalImage");
+      modalImage.src = imageUrl;
+    
+      const imageModal = document.getElementById("imageModal");
+      imageModal.showModal();    
+    });
+
+
+    /* Close modal with button */
+
+    const closeModalButton = document.getElementById("closeModal");
+    closeModalButton.addEventListener("click", () => {
+      const imageModal = document.getElementById("imageModal");
+      imageModal.close();
+    });
+
+    /* Close by clicking outside */ 
+
+    imageModal.addEventListener("click", (event) => {
+      if (event.target === imageModal) {
+        imageModal.close()
+      }
+    });
+    
+  
+
+
   }catch(error) {
     console.error("Error occurred:", error);
     blogSpecificMainContainer.innerHTML = "Something is wrong here!";
   }
 }
+
+
+
 
 blogPostSpecific();

@@ -463,6 +463,32 @@ nav ul {
   max-width: 400px;
 }
 
+  /* Modal */ 
+
+  #closeModal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: none;
+    color: var(--brown);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  #closeModal:hover {
+    color: var(--bronze);
+  }
+
+  #imageModal {
+    max-width: 800px;
+    background: none;
+    border: none;
+    overflow: hidden;
+    border: 2px solid var(--bronze);
+    padding: 0;
+  }
+
 /* Contact */
 
 .contact-h1 {
