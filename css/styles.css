@@ -233,6 +233,20 @@ nav ul {
   }
 }
 
+.gradient-blog-post {
+  position: relative;
+
+  &:after {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(255,255,255,1));
+  }
+}
+
 .frontpage-h1 {
   font-size: 0.8rem;
   padding-top: 4rem;
@@ -391,7 +405,7 @@ nav ul {
 .blogpost-h1 {
   font-size: 0.8rem;
   padding: 3rem 15px 0;
-  color: var(--white);
+  color: var(--brown);
   font-weight: regular;
   margin: 0 auto;
   padding: 15px;
@@ -481,8 +495,6 @@ nav ul {
   }
 
   #imageModal {
-    max-width: 800px;
-
     background: none;
     border: none;
     overflow: hidden;
@@ -492,6 +504,12 @@ nav ul {
 
   #imageModal::backdrop {
     background-color: rgba(0,0,0, 0.8);
+  }
+
+  #modalImage {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
   }
 
 /* Contact */
@@ -896,6 +914,11 @@ footer a {
     padding-top: 5%;
   }
 
+  .main-blog-container {
+    margin-top: 10rem;
+    background: rgb(248, 251, 251, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  }
   .blog-post-image,
   .blog-post-content-container {
     width: 50%;
