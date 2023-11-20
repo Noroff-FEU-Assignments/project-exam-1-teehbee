@@ -482,11 +482,16 @@ nav ul {
 
   #imageModal {
     max-width: 800px;
+
     background: none;
     border: none;
     overflow: hidden;
     border: 2px solid var(--bronze);
     padding: 0;
+  }
+
+  #imageModal::backdrop {
+    background-color: rgba(0,0,0, 0.8);
   }
 
 /* Contact */
