@@ -108,23 +108,66 @@ fetchAndDisplayPosts();
 document.addEventListener("DOMContentLoaded", function() {
   const previousArrow = document.querySelector(".arrow.prev");
   const nextArrow = document.querySelector(".arrow.next");
-  const carousel = document.querySelector(".carousel-blog-posts");
+  const carousels = document.querySelectorAll(".carousel-blog-posts");
 
-  if (previousArrow && nextArrow && carousel) {
+  if (previousArrow && nextArrow && carousels.length > 0) {
+
+
+      /* Selecting a specific item so that the scrollBy function can be utilized */
+
+    const carousel = carousels[0];
+
+    let postWidth = getPostWidth();
+
+    /* Function scrolling to the left with the arrow */
+
     previousArrow.addEventListener("click", function() {
       carousel.scrollBy({
-        left: -318,
-        behavior: "smooth"
+        left: -postWidth,
+        behavior: "smooth",
       });
     });
+
+    /* Function scrolling to the right with the arrow */
 
     nextArrow.addEventListener("click", function() {
       carousel.scrollBy({
-        left: 318,
-        behavior: "smooth"
+        left: postWidth,
+        behavior: "smooth",
       });
     });
+
+    /* Updates post width if screen is resized */
+
+    window.addEventListener("resize", function() {
+      postWidth = getPostWidth();
+    });
   } else {
-    console.error("an error has occured:", error)
+    console.error("an error has occured:");
   }
-})
+});
+
+/* Function calculating the width of the blog post for correct scroll behavior */
+
+function getPostWidth() {
+  const post = document.querySelector(".carousel-blog-post");
+
+  if (post) {
+
+  const postStyle = window.getComputedStyle(post);
+
+    /* As of now there is no margin on the posts, but the variables are added in case of style edits */
+
+  const marginLeft = parseFloat(postStyle.marginLeft);
+  const marginRight = parseFloat(postStyle.marginRight);
+
+  const postWidth = post.offsetWidth + marginLeft + marginRight;
+
+
+  console.log(postWidth);
+
+  return postWidth;
+  } else {
+    console.error("Something went wrong");
+  }
+}
