@@ -106,12 +106,12 @@ fetchAndDisplayPosts();
 /* Adding functionality to the arrows on the carousel - This function is loaded after the whole dom-structure is loaded to the site */
 
 document.addEventListener("DOMContentLoaded", function() {
-  const previousArrow = document.querySelector(".arrow.prev");
-  const nextArrow = document.querySelector(".arrow.next");
-  const carousels = document.querySelectorAll(".carousel-blog-posts");
+  try {
+    const previousArrow = document.querySelector(".arrow.prev");
+    const nextArrow = document.querySelector(".arrow.next");
+    const carousels = document.querySelectorAll(".carousel-blog-posts");
 
-  if (previousArrow && nextArrow && carousels.length > 0) {
-
+    if (previousArrow && nextArrow && carousels.length > 0) {
 
       /* Selecting a specific item so that the scrollBy function can be utilized */
 
@@ -119,18 +119,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let postWidth = getPostWidth();
 
-    /* Function scrolling to the left with the arrow */
+    /* Function scrolling to the left with the arrow and getting the width of the post container*/
 
     previousArrow.addEventListener("click", function() {
+      if (!postWidth) {
+        postWidth = getPostWidth();
+      }
       carousel.scrollBy({
         left: -postWidth,
         behavior: "smooth",
       });
     });
 
-    /* Function scrolling to the right with the arrow */
+    /* Function scrolling to the right with the arrow and getting the width of the post container*/
 
     nextArrow.addEventListener("click", function() {
+      if (!postWidth) {
+        postWidth = getPostWidth();
+      }
       carousel.scrollBy({
         left: postWidth,
         behavior: "smooth",
@@ -143,31 +149,36 @@ document.addEventListener("DOMContentLoaded", function() {
       postWidth = getPostWidth();
     });
   } else {
-    console.error("an error has occured:");
+    throw new Error("An error has occured again!");
   }
+} catch (error) {
+  console.error("Caught an error:", error);
+}
 });
 
-/* Function calculating the width of the blog post for correct scroll behavior */
+    /* Function calculating the width of the blog post for correct scroll behavior */
+    function getPostWidth() {
+      try {
+        const post = document.querySelector(".carousel-blog-post");
 
-function getPostWidth() {
-  const post = document.querySelector(".carousel-blog-post");
+        if(!post) {
+          throw new Error ("An error occurred: No element with the class '.carousel-blog-post' found.");
+        }
 
-  if (post) {
+      const postStyle = window.getComputedStyle(post);
 
-  const postStyle = window.getComputedStyle(post);
+        /* As of now there is no margin on the posts, but the variables are added in case of style edits */
+    
+      const marginLeft = parseFloat(postStyle.marginLeft);
+      const marginRight = parseFloat(postStyle.marginRight);
+    
+      const postWidth = post.offsetWidth + marginLeft + marginRight;
+    
+      console.log(postWidth);
+      return postWidth;
+      } catch (error) {
+        console.error("Caught an error:", error);
+        return null;
+      }
+    }
 
-    /* As of now there is no margin on the posts, but the variables are added in case of style edits */
-
-  const marginLeft = parseFloat(postStyle.marginLeft);
-  const marginRight = parseFloat(postStyle.marginRight);
-
-  const postWidth = post.offsetWidth + marginLeft + marginRight;
-
-
-  console.log(postWidth);
-
-  return postWidth;
-  } else {
-    console.error("Something went wrong");
-  }
-}
