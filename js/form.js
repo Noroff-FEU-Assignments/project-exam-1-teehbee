@@ -82,6 +82,24 @@ const form = document.querySelector("#contact-form");
       messageError.style.display = "none";
       emailError.style.display = "none";
 
+      /* Thank you modal showing upon submission of form */
+
+      const thankYouModal = document.getElementById("thank-you-modal");
+      thankYouModal.showModal();
+
+      const closeModalButton = document.getElementById("closeModal")
+      closeModalButton.addEventListener("click", () => {
+        const thankYouModal = document.getElementById("thank-you-modal");
+        thankYouModal.close();
+      });
+
+       /* Close by clicking outside */ 
+
+       thankYouModal.addEventListener("click", (event) => {
+        if (event.target === thankYouModal) {
+          thankYouModal.close();
+        }
+       })
     } 
   }
 
