@@ -325,6 +325,13 @@ nav ul {
   -webkit-overflow-scrolling: touch;
 }
 
+.carousel-text-box {
+  width: 300px;
+  margin: 0 auto;
+  text-align: left;
+  overflow: auto;
+}
+
 .carousel-blog-post {
   padding-top: 2rem;
   max-width: 100%;
@@ -332,7 +339,7 @@ nav ul {
 }
 
 .blog-carousel img {
-  max-width: 250px;
+  max-width: 300px;
   height: auto;
   max-height: 400px;
   width: 100%;
@@ -347,7 +354,7 @@ nav ul {
   font-size: 1rem;
   color: var(--brown);
   font-weight: 400;
-  max-width: 250px;
+  max-width: 100%;
   margin: 0 auto;
   padding-top: 1rem;
 }
@@ -358,7 +365,6 @@ nav ul {
   color: var(--brown);
   padding-top: 0.75rem;
   display: inline-block;
-  
 }
 
 /* About */
