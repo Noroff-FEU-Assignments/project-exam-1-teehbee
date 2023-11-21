@@ -58,13 +58,22 @@ function updateCarouselSize() {
   });
 }
 
+/* Function to fetch and display posts from the API to the carousel */
+
 function fetchAndDisplayPosts() {
   fetch("https://visitvaldrescms.thbergseng.com/wp-json/wp/v2/posts?per_page=30")
     .then(response => response.json())
     .then(data => {
       const blogCarousel = document.querySelector(".carousel-blog-posts");
 
+
+      /* Loader */
+
+      const fetchLoader = document.querySelector(".loader");
+      fetchLoader.classList.remove("loader");
+
       data.forEach(post => {
+        
         const postElement = document.createElement("div");
         postElement.classList.add("carousel-blog-post");
         postElement.innerHTML = `
@@ -79,8 +88,13 @@ function fetchAndDisplayPosts() {
 
       updateCarouselSize();
 
+      /* Make carousel responsive when resizing the window */ 
+
       window.addEventListener("resize", updateCarouselSize);
     })
+
+      /* Error handling */ 
+
     .catch(error => {
       console.error("Error fetching data:", error);
     });
@@ -88,3 +102,29 @@ function fetchAndDisplayPosts() {
 
 // Call the function to fetch and display posts
 fetchAndDisplayPosts();
+
+/* Adding functionality to the arrows on the carousel - This function is loaded after the whole dom-structure is loaded to the site */
+
+document.addEventListener("DOMContentLoaded", function() {
+  const previousArrow = document.querySelector(".arrow.prev");
+  const nextArrow = document.querySelector(".arrow.next");
+  const carousel = document.querySelector(".carousel-blog-posts");
+
+  if (previousArrow && nextArrow && carousel) {
+    previousArrow.addEventListener("click", function() {
+      carousel.scrollBy({
+        left: -318,
+        behavior: "smooth"
+      });
+    });
+
+    nextArrow.addEventListener("click", function() {
+      carousel.scrollBy({
+        left: 318,
+        behavior: "smooth"
+      });
+    });
+  } else {
+    console.error("an error has occured:", error)
+  }
+})
