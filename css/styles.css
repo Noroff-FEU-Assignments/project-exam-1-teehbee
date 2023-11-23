@@ -69,6 +69,17 @@ h1 {
   transform: scale(0.95);
 }
 
+.frontpage-button a {
+  font-size: 0.75rem;
+}
+
+.frontpage-button {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+} 
+
 /* Loader */
 
 .loader,
@@ -793,6 +804,9 @@ footer a {
       font-size: 1rem;
     }
 
+    .frontpage-button a {
+      font-size: 1rem;
+    }
   /* About */
 
   .about-text {
@@ -1092,11 +1106,15 @@ footer a {
   .container {
     max-width: 1330px;
   }
+  .frontpage-button a {
+    font-size: 1.357rem;
+  }
 
   /* Carousel */ 
 
   .carousel-blog-post {
     max-width: 25%;
+    margin: 0;
   }
 
   /* Contact */ 
