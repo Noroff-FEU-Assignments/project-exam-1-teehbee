@@ -3,6 +3,7 @@
 import { getBlogPosts } from "./api.js"; 
 
 const blogsMainContainer = document.querySelector(".blogs");
+const loadMoreButton = document.querySelector(".blogs-load-more");
 
 
 async function frontPagePosts() {
