@@ -11,10 +11,7 @@ const posts = await getBlogPosts();
 const fetchLoader = document.querySelector(".loader");
 fetchLoader.classList.remove("loader");
       
-for (let i = 0; i < 18; i++) {
-  const post = posts[i];
-  console.log(post);
-
+posts.slice(0, 18).forEach(post => {
 
   /* Create image element */
 
@@ -75,7 +72,7 @@ for (let i = 0; i < 18; i++) {
    blogsMainContainer.appendChild(blogsContainer);
   
 
-  }
+  });
 } catch(error) {
   console.error("Error occurred:", error);
   blogsMainContainer.innerHTML = "Something is wrong here!";

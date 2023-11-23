@@ -38,8 +38,6 @@ document.body.prepend(header);
 
   const bodyClass = body.classList[0];
 
-  console.log(bodyClass);
-
   const navLinks = document.querySelectorAll("#menu-list a");
 
   navLinks.forEach(link => {

@@ -10,9 +10,6 @@ async function blogPostSpecific() {
     const specificPost = await getBlogPost();
     const fetchLoader = document.querySelector(".loader");
     fetchLoader.classList.remove("loader");
-
-    console.log(specificPost);
-
     
     /* Create container for title */ 
 
@@ -118,17 +115,10 @@ async function blogPostSpecific() {
         imageModal.close()
       }
     });
-    
-  
-
-
   }catch(error) {
     console.error("Error occurred:", error);
     blogSpecificMainContainer.innerHTML = "Something is wrong here!";
   }
 }
-
-
-
 
 blogPostSpecific();
