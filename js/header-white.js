@@ -18,7 +18,7 @@ const header = document.createElement("header");
       <ul id="menu-list" class="menu-list menu-list-white">
         <li><i class="fa-solid fa-xmark"></i></li>
         <li><a href="index.html">Home</a></li>
-        <li><a href="blogs.html">Blogs</a></li>
+        <li><a class= "body-blogs-page" href="blogs.html">Blogs</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>     
@@ -30,3 +30,25 @@ const header = document.createElement("header");
 </header>` 
 
 document.body.prepend(header);
+
+ /* Setting active state on navigation */ 
+
+ function setActivePage() {
+  const body = document.querySelector("body");
+
+  const bodyClass = body.classList[0];
+
+  console.log(bodyClass);
+
+  const navLinks = document.querySelectorAll("#menu-list a");
+
+  navLinks.forEach(link => {
+    if (link.classList.contains(bodyClass)) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+ }
+
+ window.onload = setActivePage;

@@ -71,7 +71,8 @@ h1 {
 
 /* Loader */
 
-.loader {
+.loader,
+.loader-frontpage {
   margin: 2rem auto;
   width: 120px;
   height: 20px;
@@ -152,6 +153,8 @@ nav a {
   padding: 0 1rem;
   color: var(--brown);
   font-size: 1rem;
+  font-weight: 400;
+  transition: font-weight 0.1s ease-in;
 }
 
 nav li {
@@ -201,6 +204,11 @@ nav ul {
 .logo-text-desktop {
   display: flex;
   align-items: center;
+}
+
+.active {
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 /* Frontpage */
@@ -333,7 +341,7 @@ nav ul {
 }
 
 .carousel-text-box {
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
   text-align: left;
   overflow: auto;
@@ -341,6 +349,7 @@ nav ul {
 
 .carousel-blog-post {
   padding-top: 2rem;
+  margin: 0 0.2rem;
   max-width: 100%;
   text-align: center;
 }
@@ -358,7 +367,7 @@ nav ul {
 .blog-carousel h3 {
   font-family: Inter;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.75rem;
   color: var(--brown);
   font-weight: 400;
   max-width: 100%;
@@ -370,7 +379,8 @@ nav ul {
   text-decoration: underline;
   font-weight: bold;
   color: var(--brown);
-  padding-top: 0.75rem;
+  padding-top: 0.5rem;
+  font-size: 0.75rem;
   display: inline-block;
 }
 
@@ -778,6 +788,10 @@ footer a {
   .blog-carousel {
     height: 600px;
   }
+    .carousel-blog-post h3,
+    #carousel-anchortag {
+      font-size: 1rem;
+    }
 
   /* About */
 
@@ -1035,7 +1049,6 @@ footer a {
   .blog-post-images-and-text {
     display: flex;
     padding-bottom: 3rem;
-    border-bottom: 2px solid var(--frontpageWhite);
 
   }
 
@@ -1045,7 +1058,7 @@ footer a {
 
   .main-blog-container {
     margin-top: 10rem;
-    background: rgb(248, 251, 251, 0.2);
+    background: rgb(248, 251, 251, 0.5);
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
   }
   .blog-post-image,

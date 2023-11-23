@@ -1,19 +1,3 @@
-// const body = document.body;
-
-// function loadHeader() {
-//   fetch("header-brown.html")
-//   .then(function(response) {
-//     return response.text();
-//   })
-//   .then(function(data) {
-//     var headerElement = document.createElement("header");
-//     headerElement.innerHTML = data;
-//     document.body.prepend(headerElement);
-//   });
-// }
-
-// loadHeader();
-
 const header = document.createElement("header");
 
   header.innerHTML=`
@@ -33,10 +17,10 @@ const header = document.createElement("header");
     <nav id="navbar">
       <ul id="menu-list">
         <li><i class="fa-solid fa-xmark"></i></li>
-        <li><a href="index.html">Home</a></li>
+        <li><a class="body-frontpage" href="index.html">Home</a></li>
         <li><a href="blogs.html">Blogs</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a class="body-about-page" href="about.html">About</a></li>
+        <li><a class="body-contact-page" href="contact.html">Contact</a></li>
       </ul>     
     </nav>
     <i class="fa-solid fa-bars hamburger-button"></i>
@@ -44,3 +28,25 @@ const header = document.createElement("header");
 </header>` 
 
 document.body.prepend(header);
+
+ /* Setting active state on navigation */ 
+
+ function setActivePage() {
+  const body = document.querySelector("body");
+
+  const bodyClass = body.classList[0];
+
+  console.log(bodyClass);
+
+  const navLinks = document.querySelectorAll("#menu-list a");
+
+  navLinks.forEach(link => {
+    if (link.classList.contains(bodyClass)) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+ }
+
+ window.onload = setActivePage;
