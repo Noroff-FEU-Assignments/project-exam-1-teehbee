@@ -17,7 +17,7 @@ const header = document.createElement("header");
     <nav id="navbar">
       <ul id="menu-list">
         <li><i class="fa-solid fa-xmark"></i></li>
-        <li><a class="body-frontpage" href="index.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="blogs.html">Blogs</a></li>
         <li><a class="body-about-page" href="about.html">About</a></li>
         <li><a class="body-contact-page" href="contact.html">Contact</a></li>

@@ -11,7 +11,7 @@ const posts = await getBlogPosts();
 const fetchLoader = document.querySelector(".loader");
 fetchLoader.classList.remove("loader");
       
-posts.slice(0, 18).forEach(post => {
+posts.slice(0, 10).forEach(post => {
 
   /* Create image element */
 
