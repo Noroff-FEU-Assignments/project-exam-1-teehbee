@@ -43,7 +43,7 @@ async function blogPostSpecific() {
     blogSpecificImage.src=specificPost.jetpack_featured_media_url;
     blogSpecificImage.classList.add("blog-post-picture");
 
-    blogListImage.alt = post.slug;
+    blogSpecificImage.alt = specificPost.slug;
 
     /* Create text container */
 
