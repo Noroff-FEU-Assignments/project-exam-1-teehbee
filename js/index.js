@@ -18,7 +18,7 @@ import { getBlogPosts } from "./api.js";
          const postElement = document.createElement("div");
          postElement.classList.add("carousel-blog-post");
          postElement.innerHTML = `
-           <a href="../blogpost.html?id=${post.id}"><img src="${post.jetpack_featured_media_url}"></a>
+           <a href="../blogpost.html?id=${post.id}"><img src="${post.jetpack_featured_media_url}" alt="${post.slug}""></a>
            <div class="carousel-text-box">
            <a href="../blogpost.html?id=${post.id}"><h3>${post.title.rendered}</h3></a>
            <a id=carousel-anchortag href="../blogpost.html?id=${post.id}">Read more here..</a>

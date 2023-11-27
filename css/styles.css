@@ -75,7 +75,7 @@ h1 {
 
 .frontpage-button {
   position: absolute;
-  top: 10%;
+  top: 14%;
   left: 50%;
   transform: translateX(-50%);
 } 
@@ -267,7 +267,7 @@ nav ul {
 }
 
 .frontpage-h1 {
-  font-size: 0.8rem;
+  font-size: 1.357rem;
   padding-top: 4rem;
 }
 
@@ -283,7 +283,7 @@ nav ul {
 } 
 
 .frontpage-lower-logo {
-  padding-top: 50vh;
+  padding-top: 20vh;
 }
 
 .frontpage-text-box {
@@ -791,10 +791,10 @@ footer a {
   }
   .frontpage-h1 {
     padding-top: 4rem;
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
   .frontpage-lower-logo {
-    padding-top: 60vh;
+    padding-top: 35vh;
   }
   .blog-carousel {
     height: 600px;
@@ -948,10 +948,13 @@ footer a {
 
     /* Frontpage */ 
 
-    .frontpage-h1,
     .frontpage-h2,
     .frontpage-h3 {
       font-size: 1.357rem;
+    }
+
+    .frontpage-h1 {
+      font-size: 2.25rem;
     }
 
     .frontpage-text-box p {

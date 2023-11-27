@@ -19,6 +19,10 @@ posts.slice(0, 10).forEach(post => {
    const blogListImage = document.createElement("img");
    blogListImage.src = post.jetpack_featured_media_url;
    blogListImage.classList.add("blogs-list-image");
+
+  /* Look for and implement alt-text for image */
+
+  blogListImage.alt = post.slug;
  
   /* Create title element */
 
