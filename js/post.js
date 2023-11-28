@@ -119,7 +119,7 @@ async function blogPostSpecific() {
     });
   }catch(error) {
     console.error("Error occurred:", error);
-    blogSpecificMainContainer.innerHTML = "Something is wrong here!";
+    blogSpecificMainContainer.innerHTML = "<p>Something is wrong here!</p>";
   }
 }
 

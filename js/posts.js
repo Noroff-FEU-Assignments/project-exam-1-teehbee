@@ -4,17 +4,27 @@ import { getBlogPosts } from "./api.js";
 
 const blogsMainContainer = document.querySelector(".blogs");
 const loadMoreButton = document.querySelector(".blogs-load-more");
+const loaderContainer = document.querySelector(".loader-container");
+
+let currentIndex = 10;
 
 
 async function frontPagePosts() {
 try {
-const posts = await getBlogPosts();
-const fetchLoader = document.querySelector(".loader");
-fetchLoader.classList.remove("loader");
-      
-posts.slice(0, 10).forEach(post => {
 
-  /* Create image element */
+  const fetchLoader = document.createElement("div");
+  fetchLoader.classList.add("loader");
+  loaderContainer.appendChild(fetchLoader);
+  
+
+const posts = await getBlogPosts();
+fetchLoader.classList.remove("loader");
+
+      
+posts.slice(0, currentIndex).forEach(post => {
+
+  if (!document.getElementById(`post-${post.id}`)) {
+    /* Create image element */
 
    const blogListImage = document.createElement("img");
    blogListImage.src = post.jetpack_featured_media_url;
@@ -47,9 +57,10 @@ posts.slice(0, 10).forEach(post => {
   blogListPreview.innerHTML = post.excerpt.rendered;
   blogListPreview.classList.add("text-preview");
 
-  /* Create main blog container */
+  /* Create main blog container. This also creates a ID for the div which will make sure the load more function only loads new posts.  */
  
    const blogsContainer = document.createElement("div");
+   blogsContainer.id = `post-${post.id}`;
    blogsContainer.classList.add("blog-container");
 
  
@@ -77,12 +88,20 @@ posts.slice(0, 10).forEach(post => {
    blogsMainContainer.appendChild(blogsContainer);
   
 
+  }
+
   });
 } catch(error) {
   console.error("Error occurred:", error);
   blogsMainContainer.innerHTML = "Something is wrong here!";
 }
 }
+
+loadMoreButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  currentIndex += 10;
+  frontPagePosts();
+})
 
 frontPagePosts();
 

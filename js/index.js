@@ -18,7 +18,7 @@ import { getBlogPosts } from "./api.js";
          const postElement = document.createElement("div");
          postElement.classList.add("carousel-blog-post");
          postElement.innerHTML = `
-           <a href="../blogpost.html?id=${post.id}"><img src="${post.jetpack_featured_media_url}"></a>
+           <a href="../blogpost.html?id=${post.id}"><img src="${post.jetpack_featured_media_url}" alt="${post.slug}""></a>
            <div class="carousel-text-box">
            <a href="../blogpost.html?id=${post.id}"><h3>${post.title.rendered}</h3></a>
            <a id=carousel-anchortag href="../blogpost.html?id=${post.id}">Read more here..</a>
@@ -32,7 +32,7 @@ import { getBlogPosts } from "./api.js";
        /* Make carousel responsive when resizing the window */
        window.addEventListener("resize", updateCarouselSize);
       } catch (error) {
-        console.error("An error has occured fetching data:", error);
+        console.error("An error has occured:", error);
       }
     }
 
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function() {
       postWidth = getPostWidth();
     });
   } else {
-    throw new Error("An error has occured again!");
+    throw new Error("An error has occured!");
   }
 } catch (error) {
   console.error("Caught an error:", error);
