@@ -71,13 +71,6 @@ h1 {
 
 .frontpage-button a {
   font-size: 0.75rem;
-}
-
-.frontpage-button {
-  position: absolute;
-  top: 14%;
-  left: 50%;
-  transform: translateX(-50%);
 } 
 
 /* Loader */
@@ -96,6 +89,10 @@ h1 {
 
 @keyframes l2 {
     100% {background-size:110%}
+}
+
+.loader-frontpage {
+  display: inline-block;
 }
 
 /* For white header - Creating black background to header element for adjusting the styling on the white version of the header */
