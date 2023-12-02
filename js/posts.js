@@ -89,6 +89,9 @@ posts.slice(0, currentIndex).forEach(post => {
   }
 
   });
+
+  /* Remove load more button when no more posts to load */
+
   if (posts.length < currentIndex) {
     loadMoreButton.style.display = "none";
   }
