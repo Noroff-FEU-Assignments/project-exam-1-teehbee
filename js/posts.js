@@ -86,11 +86,12 @@ posts.slice(0, currentIndex).forEach(post => {
 
    /* Append blog container */
    blogsMainContainer.appendChild(blogsContainer);
-  
-
   }
 
   });
+  if (posts.length < currentIndex) {
+    loadMoreButton.style.display = "none";
+  }
 } catch(error) {
   console.error("Error occurred:", error);
   blogsMainContainer.innerHTML = "Something is wrong here!";
@@ -100,8 +101,9 @@ posts.slice(0, currentIndex).forEach(post => {
 loadMoreButton.addEventListener("click", (event) => {
   event.preventDefault();
   currentIndex += 10;
+  loadMoreButton.style.display = "block";
   frontPagePosts();
-})
+});
 
 frontPagePosts();
 
